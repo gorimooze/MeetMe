@@ -184,6 +184,68 @@ header {
 
 
 
+/* СЕКЦИЯ 3 */
+.sec3 {
+    width: 100%;
+    min-height: 420px;
+    background-color: #2A1CC7;
+    padding: 30px 0 30px 0 ;
+}
+
+/* .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+} */
+
+.slider {
+    border: 2px solid black;
+    /* width: 100%; */
+    max-width: 60%;
+    /* height: 300px; */
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-line {
+    width: 1000px;
+    display: flex;
+    background: orange;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+.slider img {
+    max-height: 700px;
+}
+
+.container-btns {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-btns button {
+    width: 80px;
+    height: 40px;
+    border: none;
+    background: linear-gradient(89.88deg, #9147FF 0.09%, #FF4747 99.9%);
+    border-radius: 8px;
+    transition: 2s;
+    border: none;
+    font-family: "Revalia";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
 
 
 
@@ -216,6 +278,28 @@ header {
     .ques {
         width: 90%;
         margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sec3 {
+        padding: 30px 0 0 0;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .sec3 {
+        min-height: 350px;
+    }
+
+    h1 {
+        padding: 30px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sec3 {
+        min-height: 300px;
     }
 }
 
@@ -278,11 +362,32 @@ header {
 
 
 /* HOVER */
-@keyframes spin {
+/* @keyframes spin {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
 }
 
 .img img {
   animation: spin 3s infinite;
+} */
+
+
+
+
+
+
+
+/* АНИМАЦИЯ */
+.sec4 {
+    display: flex;
+}
+
+
+h1 {
+    font-family: "Revalia";
+    color: #000000;
+    font-weight: 200;
+    margin: 0.4em 0;
+    font-size: 3.5em;
+    text-align: center;
 }
