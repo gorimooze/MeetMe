@@ -1,37 +1,3 @@
-// ШАПКА
-function a() {
-    var h = document.getElementById('hid_men');
-    var burg1 = document.getElementById('burg1');
-    var burg2 = document.getElementById('burg2');
-    var burg3 = document.getElementById('burg3');
-
-    if (h.style.opacity == '1') {
-        h.style.opacity = '0';
-        h.style.visibility = 'hidden';
-        burg1.style.transform = 'rotate(0deg)';
-        burg1.style.transition = '0.5s';
-        burg1.style.marginBottom = '4px';
-        burg3.style.transform = 'rotate(0deg)';
-        burg3.style.transition = '0.5s';
-        burg3.style.marginTop = '4px';
-        burg2.style.opacity = '1';
-        burg2.style.transition = '0.5s';
-    } else {
-        h.style.opacity = '1';
-        h.style.visibility = 'visible';
-        burg1.style.transform = 'rotate(45deg)';
-        burg1.style.transition = '0.5s';
-        burg1.style.marginBottom = '-5px';
-        burg3.style.transform = 'rotate(-45deg)';
-        burg3.style.transition = '0.5s';
-        burg3.style.marginTop = '-5px';
-        burg2.style.opacity = '0';
-        burg2.style.transition = '0.5s';
-    }
-}
-
-
-
 // СЛАЙДЕР
 const images = document.querySelectorAll('.slider .slider-line img');
 const sliderLine = document.querySelector('.slider .slider-line');
@@ -124,5 +90,57 @@ var TxtRotate = function(el, toRotate, period) {
         new TxtRotate(elements[i], JSON.parse(toRotate), period);
       }
     }
-    // INJECT CSS
   };
+
+
+// СКОЛЛ В КОНЕЦ
+function scrollTo(element) {
+  window.scroll({
+    left: 0, 
+    top: element.offsetTop, 
+    behavior: 'smooth',
+  })
+}
+
+var sec1_button = document.querySelector('#sec1-button');
+var about_us = document.querySelector('#sec7');
+
+sec1_button.addEventListener('click', () => {
+  scrollTo(about_us);
+})
+
+function scrollTo(element) {
+  window.scroll({
+    left: 0, 
+    top: element.offsetTop, 
+    behavior: 'smooth',
+  })
+}
+
+
+
+var sec1_button = document.querySelector('#sec2-button');
+var about_us = document.querySelector('#sec7');
+
+sec1_button.addEventListener('click', () => {
+  scrollTo(about_us);
+})
+
+
+// ПЛАВНЫЙ  СКРОЛЛ
+$(document).bind( 'mousewheel', function (e) { 
+  var nt = $(document.body).scrollTop()-(e.deltaY*e.deltaFactor*100); 
+  e.preventDefault(); 
+  e.stopPropagation(); 
+  $(document.body).stop().animate( { 
+       scrollTop : nt 
+   } , 500 , 'easeInOutCubic' );  
+} )
+
+// ПРЕЛОУДЕР
+$(window).on('load', function () {
+  $preloader = $('.loaderArea'),
+    $loader = $preloader.find('.loader');
+  $loader.fadeOut();
+  $preloader.delay(650).fadeOut('slow');
+});

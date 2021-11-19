@@ -12,22 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Revalia&family=Roboto+Slab:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>Главная</title>
 </head>
 <body>
 
+    <div class="loaderArea">
+        <div class="loader"></div>
+     </div>
+
     <header>
         <div class="header-wrap">
             <p class="logo">MeetMe</p>
-            <div class="header" id="hid_men">
-                <a class="link active" href="#">Главная</a>
-                <a class="link" href="#">Команда</a>
-            </div>
-            <div class="burger-menu" onclick="a()">
-                <div class="burg1" id="burg1"></div>
-                <div class="burg2" id="burg2"></div>
-                <div class="burg3" id="burg3"></div> 
-            </div>
+            <h2>Meet me - new opportunities!</h2>
         </div>
     </header>
     
@@ -38,19 +35,27 @@
                     <p>Уже используешь MeetMe?</p>
                 </div>
                 <div class="btns">
-                    <button class="yes">Да</button>
-                    <button class="no">Нет</button>
+                    <button id="sec1-button" class="yes">Да</button>
+                    <button id="sec2-button" class="no">Нет</button>
                 </div>
             </div>
             <div class="img">
-                <img src="img/logo.svg">
+                <img src="img/logo.svg" draggable="false">
             </div>
         </div>
     </section>
 
     <section class="sec2">
         <div class="wrapper">
-            <img src="img/note.png">
+            <!-- <img src="img/note.png" draggable="false"> -->
+            <div class="animat">
+                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_xq7eh6d7.json"  background="transparent"  
+                speed="1"  style="width: 500px; height: 500px;"  loop  autoplay></lottie-player>
+            </div>
+            <div class="mob">
+                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_xq7eh6d7.json"  background="transparent"  
+                speed="1"  style="width: 270px; height: 270px;"  loop  autoplay></lottie-player>
+            </div>
             <div class="content">
                 <h2>О приложении:</h2>
                 <div class="text">
@@ -70,11 +75,11 @@
         <div class="container">
             <div class="slider">
                 <div class="slider-line">
-                    <img src="./img/slide-1.jpg">
-                    <img src="./img/slide-2.jpg">
-                    <img src="./img/slide-3.jpg">
-                    <img src="./img/slide-4.jpeg">
-                    <img src="./img/slide-5.jpg">
+                    <img src="./img/slide-1.jpg" draggable="false">
+                    <img src="./img/slide-2.jpg" draggable="false">
+                    <img src="./img/slide-3.jpg" draggable="false">
+                    <img src="./img/slide-4.jpeg" draggable="false">
+                    <img src="./img/slide-5.jpg" draggable="false">
                 </div>
             </div>
             <div class="container-btns">
@@ -92,7 +97,7 @@
                 <span
                    class="txt-rotate"
                    data-period="2000"
-                   data-rotate='[ " your friends.", " new friends.", " source of fun.", " time killer.", " new opportunities!" ]'></span>
+                   data-rotate='[ " your friends.", " new friends.", " source of fun.", " time killer.", " new moments!" ]'></span>
             </h1>
             <div class="content">
                 <h2>Кому подойдет:</h2>
@@ -109,7 +114,105 @@
         </div>
     </section>
 
+    <section class="sec5">
+        <h2>Team</h2>
+        <div class="container-card">
+            <div class="row-card">
+                <div class="card">
+                    <h3>Александр Рогалёв</h3>
+                    <div class="content">
+                        <img src="img/alex.jpg">
+                        <h4>Developer</h4>
+                        <p>
+                            Рассказываю о том как делал классный проект. Мне понравилось
+                            рабоать в такой классной команде. Я не знаю что ещё рассказать, 
+                            просто надо было как-то заполнить текстом. Вроде заполнил.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Дмитрий Суфрай</h3>
+                    <div class="content">
+                        <img src="img/dima.jpg">
+                        <h4>Developer</h4>
+                        <p>
+                            Рассказываю о том как делал классный проект. Мне понравилось
+                            рабоать в такой классной команде. Я не знаю что ещё рассказать, 
+                            просто надо было как-то заполнить текстом. Вроде заполнил.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Анастсия Кострич</h3>
+                    <div class="content">
+                        <img src="img/nast.jpg">
+                        <h4>Developer</h4>
+                        <p>
+                            Рассказываю о том как делал классный проект. Мне понравилось
+                            рабоать в такой классной команде. Я не знаю что ещё рассказать, 
+                            просто надо было как-то заполнить текстом. Вроде заполнил.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row-card">
+                <div class="card">
+                    <h3>Максим Коцага</h3>
+                    <div class="content">
+                        <img src="img/max.jpg">
+                        <h4>Developer</h4>
+                        <p>
+                            Рассказываю о том как делал классный проект. Мне понравилось
+                            рабоать в такой классной команде. Я не знаю что ещё рассказать, 
+                            просто надо было как-то заполнить текстом. Вроде заполнил.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Мария Делиу</h3>
+                    <div class="content">
+                        <img src="img/kira.jpg">
+                        <h4>Developer</h4>
+                        <p>
+                            Рассказываю о том как делал классный проект. Мне понравилось
+                            рабоать в такой классной команде. Я не знаю что ещё рассказать, 
+                            просто надо было как-то заполнить текстом. Вроде заполнил.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Александр Гарнов</h3>
+                    <div class="content">
+                        <img src="img/gar.jpg">
+                        <h4>Developer</h4>
+                        <p>
+                            Рассказываю о том как делал классный проект. Мне понравилось
+                            рабоать в такой классной команде. Я не знаю что ещё рассказать, 
+                            просто надо было как-то заполнить текстом. Вроде заполнил.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <footer id="sec7">
+        <div class="footer wrap">
+            <div class="footer wrapper">
+                <div class="container-input">
+                    <input type="text" placeholder="Имя Фамилия" required">
+                    <input type="text" placeholder="Почта" required>
+                    <!-- <input class="otziv" type="text" placeholder="Отзыв" required> -->
+                    <textarea class="otziv" cols="20" rows="5" placeholder="Отзыв""></textarea>
+                </div>
+                <button class="mess">Отправить</button>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="script.js"></script>
 
 </body>

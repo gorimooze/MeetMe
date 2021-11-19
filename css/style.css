@@ -1,3 +1,79 @@
+.loaderArea {
+    background: linear-gradient(89.88deg, #9147FF 0.09%, #FF4747 99.9%);
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom:0;
+    z-index: 100000;
+  }
+
+  .loader {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    top: 50%;
+    margin-top: -20px;
+  }
+   
+  .loader:before,
+  .loader:after {
+    content: "";
+    height: 40px;
+    width: 40px;
+    border: 8px solid rgba(255,255,255,.5);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+  }
+   
+  .loader:before {
+    animation: animate 3s infinite linear;
+  }
+   
+  @keyframes animate {
+    0% {
+      transform: rotate(0) skew(0);
+    }
+     
+    100% {
+      transform: rotate(180deg) skew(360deg);
+    }
+  }
+   
+   
+  .loader:after {
+    animation: animate2 3s infinite linear;
+  }
+   
+  @keyframes animate2 {
+    0% {
+      transform: rotate(0) skew(0);
+    }
+     
+    100% {
+      transform: rotate(-180deg) skew(-360deg);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     background-color: #9B94F0;
 }
@@ -31,6 +107,12 @@ header {
     align-items: center;
     text-align: center;
     color: #000000;
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .header {
@@ -39,19 +121,20 @@ header {
     justify-content: space-between;
 }
 
-.link {
-    text-decoration: none;
-    font-family: "Roboto Slab";
+.header-wrap h2 {
+    width: 700px;
+    font-family: "Revalia";
     font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
+    font-size: 30px;
     line-height: 27px;
     text-align: center;
     color: #000000;
-}
-
-.link.active {
-    color: #1C1386;
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 
@@ -64,8 +147,7 @@ header {
     background-color: #2A1CC7;
     display: flex;
     align-items: center;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-radius: 50px;
 }
 
 .wrap {
@@ -126,7 +208,9 @@ header {
     line-height: 28px;
     text-align: center;
     color: #FFFFFF;
+    transition: 0.5s;
 }
+
 
 .img img {
     width: 250px;
@@ -179,7 +263,16 @@ header {
     font-size: 20px;
     line-height: 30px;
     text-align: center;
-    color: #FFFFFF
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.animat {
+    display: block;
+}
+
+.mob {
+    display: none;
 }
 
 
@@ -190,14 +283,8 @@ header {
     min-height: 420px;
     background-color: #2A1CC7;
     padding: 30px 0 30px 0 ;
+    border-radius: 50px;
 }
-
-/* .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 20px;
-} */
 
 .slider {
     border: 2px solid black;
@@ -229,8 +316,8 @@ header {
 }
 
 .container-btns button {
-    width: 80px;
-    height: 40px;
+    width: 100px;
+    height: 60px;
     border: none;
     background: linear-gradient(89.88deg, #9147FF 0.09%, #FF4747 99.9%);
     border-radius: 8px;
@@ -242,7 +329,195 @@ header {
     line-height: 28px;
     text-align: center;
     color: #FFFFFF;
+    transition: 0.5s;
 }
+
+
+
+/* СЕКЦИЯ 4 */
+.sec4 {
+    display: flex;
+}
+
+
+h1 {
+    font-family: "Revalia";
+    color: #000000;
+    font-weight: 200;
+    margin: 0.4em 0;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+
+
+
+/* СЕКЦИЯ 5 */
+.sec5 {
+    width: 100%;
+    min-height: 2200px;
+    background: #2A1CC7;
+    border-radius: 50px;
+    padding-top: 30px;
+}
+
+.sec5 h2 {
+    font-family: "Revalia";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 74px;
+    text-align: center;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.container-card {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row-card {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    max-width: 400px;
+    min-height: 600px;
+    background: #0D093F;
+    mix-blend-mode: normal;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.card h3 {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #DDDBFA;
+    margin: 10px 0 20px 0;
+}
+
+.card img {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card h4 {
+    font-family: "Revalia";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 22px;
+    width: 90%;
+    margin: 5px auto;
+    color: #DDDBFA;
+}
+
+.card p {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    width: 90%;
+    margin: 20px auto;
+    color: #DDDBFA;
+}
+
+
+
+
+/* ПОДВАЛ */
+footer {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer.wrap {
+    max-width: 600px;
+    height: 400px;
+    background: #2A1CC7;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer.wrapper {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    background-color: #09062C;
+    border-radius: 5px;
+    margin: 5px 0;
+    border: none;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: rgba(221, 219, 250, 0.5);
+}
+
+textarea {
+    width: 100%;
+    background-color: #09062C;
+    border-radius: 5px;
+    margin: 5px 0;
+    border: none;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: rgba(221, 219, 250, 0.5);
+}
+
+.mess {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #09062C;
+}
+
 
 
 
@@ -256,6 +531,59 @@ header {
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .row-card {
+        width: 35%;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .wrapper img {
+        width: 300px;
+    } 
+
+
+    .container-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row-card {
+        width: 70%;
+    }
+
+    .card {
+        margin: 20px auto;
+    }
+
+    .container-btns button {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 760px) {
+    .logo {
+        font-size: 40px;
+    }
+
+    .header-wrap {
+        justify-content: center;
+    }
+
+    .header-wrap h2 {
+        display: none;
+    }
+
+    .logo {
+        width: auto;
+    }
+}
 
 @media screen and (max-width: 700px) {
     .img img {
@@ -281,10 +609,22 @@ header {
     }
 }
 
+@media screen and (max-width: 650px) {
+    .footer.wrap {
+        width: 90%;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .sec3 {
         padding: 30px 0 0 0;
     } 
+}
+
+@media screen and (max-width: 570px) {
+    .row-card {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -294,100 +634,87 @@ header {
 
     h1 {
         padding: 30px 0;
+        font-size: 3em;
+    }
+
+    .animat {
+        display: none;
+    }
+
+    .mob {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .row-card {
+        width: 90%;
+    }
+
+    .footer.wrap {
+        width: 95%;
+    }
+
+    .footer.wrapper {
+        width: 92%;
     }
 }
 
 @media screen and (max-width: 400px) {
     .sec3 {
         min-height: 300px;
+        border-radius: 30px;
+    }
+
+    .sec5 {
+        border-radius: 30px;
+    }
+
+    .sec1 {
+        border-radius: 30px;
     }
 }
 
 
-/* БУРГЕР МЕНЮ */
-@media screen and (max-width: 800px) {
-    .header-wrap{
-        position: relative;
-    }
-
-    .logo {
-        font-size: 40px;
-    }
-
-    .header{
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        padding: 20px 0;
-        background-color: #9B94F0;
-        visibility: hidden;
-        opacity: 0;
-    }
-    .burger-menu{
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
-    }
-    
-    .burg1 {
-        width: 40px;
-        height: 5px;
-        background: white;
-        margin-bottom: 10px;
-    }
-    
-    .burg2 {
-        width: 40px;
-        height: 5px;
-        background: white;
-    }
-    
-    .burg3 {
-        width: 40px;
-        height: 5px;
-        background: white;
-        margin-top: 10px;
-    }
-
-
-    .wrapper{
-        flex-direction: column;
-    }
-
-    .wrapper img {
-        width: 300px;
-    }
-}
 
 
 /* HOVER */
-/* @keyframes spin {
+@keyframes spin {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
 }
 
 .img img {
   animation: spin 3s infinite;
-} */
-
-
-
-
-
-
-
-/* АНИМАЦИЯ */
-.sec4 {
-    display: flex;
 }
 
+.btns button:hover {
+    width: 50%;
+    height: 60px;
+}
 
-h1 {
-    font-family: "Revalia";
-    color: #000000;
-    font-weight: 200;
-    margin: 0.4em 0;
-    font-size: 3.5em;
-    text-align: center;
+.container-btns button:hover {
+    width: 120px;
+    height: 80px;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+.card:hover {
+    animation: bounce 1s;
 }
