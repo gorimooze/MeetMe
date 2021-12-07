@@ -257,7 +257,7 @@ header {
 }
 
 .content p {
-    font-family: "Revalia";
+    font-family: "Roboto Slab";
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -443,8 +443,32 @@ footer {
     width: 100%;
     min-height: 500px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.download {
+    width: 300px;
+    height: 150px;
+    background: #2A1CC7;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.download a {
+    font-family: "Revalia";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .footer.wrap {
@@ -455,6 +479,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .footer.wrapper {
@@ -484,7 +509,7 @@ input {
     line-height: 22px;
     display: flex;
     align-items: center;
-    color: rgba(221, 219, 250, 0.5);
+    color: #FFFFFF;
 }
 
 textarea {
@@ -500,7 +525,7 @@ textarea {
     line-height: 22px;
     display: flex;
     align-items: center;
-    color: rgba(221, 219, 250, 0.5);
+    color: #FFFFFF;
 }
 
 .mess {
@@ -718,3 +743,7 @@ textarea {
 .card:hover {
     animation: bounce 1s;
 }
+
+.download:hover {
+    animation: bounce 1s;
+} 
