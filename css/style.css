@@ -654,7 +654,7 @@ textarea {
 
 @media screen and (max-width: 500px) {
     .sec3 {
-        min-height: 350px;
+        min-height: 380px;
     }
 
     h1 {
@@ -687,7 +687,7 @@ textarea {
 
 @media screen and (max-width: 400px) {
     .sec3 {
-        min-height: 300px;
+        min-height: 330px;
         border-radius: 30px;
     }
 
